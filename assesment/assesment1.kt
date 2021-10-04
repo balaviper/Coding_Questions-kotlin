@@ -60,52 +60,57 @@ class Repository {
             println("1.Add Question\n2.Show Question\n3.Test Question \n4.Exit\n")
             var c = sc.nextInt()
             if (c == 1) {
-                println("\nEnter number of Questions to add\n")
-                val n = sc.nextInt()
-                sc.nextLine()
-                for (i in 1..n) {
-                    val q = Question()
-                    q.idd = i
-                    println("\nEnter Question $i\n")
-                    //sc.nextLine()
-                    q.qt = sc.nextLine()
-                    println("\nEnter No of choices \n")
-                    var nc = sc.nextInt()
-                    sc.nextLine()
-                    var strArr: Array<String> = Array(nc) { "" }
-                    for (i in 0..nc-1 step 1) {
-                        println("\nEnter choice ${i+1}\n")
-                        var choise = sc.nextLine()
-                        strArr[i] = choise
-                    }
-                    q.ch = strArr
-
-                    println("\nEnter correct answer for the Question $i\n")
-                    q.ans = sc.nextLine()
-
-                    questions.add(q)
-                }
+               addQuestions()
             } else if (c == 2) {
                 display()
-
             } else if (c == 3) {
                 display()
-
-                println("\nEnter Question Number to Test Question\n")
-                    val no = sc.nextInt()
-                    val qtt = questions.find { it.idd==no }
-                    println("\nChoose the best option for Question ${qtt?.idd}\n")
-                    sc.nextLine()
-                    val answer = sc.nextLine()
-                    if (answer.equals(qtt?.ans)) {
-                        println("\nCorrect Answer\n")
-                    } else {
-                        println("\nWrong Answer\n")
-                    }
+                testQuestions()
             } else if (c == 4) {
                 break
             }
+        }
+    }
 
+    fun testQuestions(){
+        println("\nEnter Question Number to Test Question\n")
+        val no = sc.nextInt()
+        val qtt = questions.find { it.idd==no }
+        println("\nChoose the best option for Question ${qtt?.idd}\n")
+        sc.nextLine()
+        val answer = sc.nextLine()
+        if (answer.equals(qtt?.ans)) {
+            println("\nCorrect Answer\n")
+        } else {
+            println("\nWrong Answer\n")
+        }
+    }
+
+    fun addQuestions(){
+        println("\nEnter number of Questions to add\n")
+        val n = sc.nextInt()
+        sc.nextLine()
+        for (i in 1..n) {
+            val q = Question()
+            q.idd = i
+            println("\nEnter Question $i\n")
+            //sc.nextLine()
+            q.qt = sc.nextLine()
+            println("\nEnter No of choices \n")
+            var nc = sc.nextInt()
+            sc.nextLine()
+            var strArr: Array<String> = Array(nc) { "" }
+            for (i in 0..nc-1 step 1) {
+                println("\nEnter choice ${i+1}\n")
+                var choise = sc.nextLine()
+                strArr[i] = choise
+            }
+            q.ch = strArr
+
+            println("\nEnter correct answer for the Question $i\n")
+            q.ans = sc.nextLine()
+
+            questions.add(q)
         }
     }
 
