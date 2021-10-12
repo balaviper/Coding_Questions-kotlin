@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <SeekBar
+        android:id="@+id/loanseek"
+        android:layout_width="341dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loanamt" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="248dp"
+        android:layout_height="98dp"
+        android:layout_marginBottom="112dp"
+        android:text="Value"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/intrestseek"
+        android:layout_width="344dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/intrest" />
+
+    <SeekBar
+        android:id="@+id/tenureseek"
+        android:layout_width="338dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tenure" />
+
+    <EditText
+        android:id="@+id/loanamt"
+        android:layout_width="331dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="Loan Amount"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/intrest"
+        android:layout_width="334dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:hint="Intrest Rate"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/loanseek" />
+
+    <EditText
+        android:id="@+id/tenure"
+        android:layout_width="334dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="Loan Tensure"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/intrestseek" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
