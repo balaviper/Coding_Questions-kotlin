@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataEntryFragment" >
+
+    <EditText
+        android:id="@+id/editNAme"
+        android:layout_width="146dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Expence Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editPrice"
+        android:layout_width="163dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Expence Price"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/editNAme"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editDate"
+        android:layout_width="333dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Date"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNAme" />
+
+    <TextView
+        android:id="@+id/editDesc"
+        android:layout_width="262dp"
+        android:layout_height="229dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="72dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="156dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDesc" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="331dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
